@@ -1,0 +1,82 @@
+<html>
+
+<head>
+	<script src="https://d3stwwuzizi91v.cloudfront.net/boomCalc.js" defer></script>
+	<style>
+		/* essential */
+		label, input {
+			margin-left: 10px;
+			margin-bottom: 10px;
+		}
+
+		table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+		}
+
+		thead {
+			background-color: #adedab;
+		}
+
+		td,
+		th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+	</style>
+	<title>
+		Boom Beach Force Point Calculator
+	</title>
+</head>
+
+<body>
+	<form id="fp">
+		<div>
+			<label for="name">Starting Force Points:</label>
+			<input type="text" id="startFp" name="start_fp" value="0">
+		</div>
+
+		<div>
+			<label for="mail">Daily Reset Occured?</label>
+			<input type="checkbox" id="reset" name="reset">
+		</div>
+
+		<div>
+			<label for="msg">Operation Force Points:</label>
+			<input type="text" id="dailyFp" name="daily_fp">
+		</div>
+
+		<input type="submit">
+	</form>
+
+	<div id="result1" style="padding: 8px;">
+		<table>
+			<thead>
+				<tr>
+					<th>Days Until Max</th>
+				</tr>
+			</thead>
+			<tbody id="maxDays"></tbody>
+		</table>
+	</div>
+
+	<div id="result2" id="result1" style="padding: 8px;">
+		<table>
+			<thead>
+				<tr>
+					<th>Day</th>
+					<th>Force Points</th>
+				</tr>
+			</thead>
+			<tbody id="breakdown"></tbody>
+		</table>
+	</div>
+
+</body>
+
+</html>
